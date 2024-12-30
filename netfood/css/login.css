@@ -1,0 +1,61 @@
+/* Style untuk body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: red;
+
+}
+
+/* Style untuk container */
+.container {
+    margin-top: 50px;
+}
+
+/* Style untuk judul */
+h4 {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Style untuk link kembali ke home */
+a {
+    color: #007bff;
+}
+
+/* Style untuk form login */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #ddd;
+}
+
+/* Style untuk label */
+label {
+    font-weight: bold;
+    color: red;
+}
+
+/* Style untuk input field */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+/* Style untuk tombol login */
+input[type="submit"] {
+    background-color: red;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    
+}
+
+/* Style untuk tombol login saat di-hover */
+input[type="submit"]:hover {
+    background-color: #0069d9;
+}

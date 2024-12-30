@@ -1,0 +1,49 @@
+<?php
+// Koneksi ke database
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$dbname = "database";
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+// Cek koneksi
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+
+// Ambil kata kunci pencarian dari URL
+$search = $_GET['search'];
+
+// Query untuk mencari makanan yang mengandung kata kunci
+$sql = "SELECT * FROM makanan WHERE nama_makanan LIKE '%$search%'";
+
+$result = mysqli_query($conn, $sql);
+
+if (mysqli_num_rows($result) > 0) {
+  // Jika ditemukan makanan yang sesuai, tampilkan dalam tabel
+  echo "<table>
+          <thead>
+            <tr>
+              <th>Nama Makanan</th>
+              <th>Detail Makanan</th>
+              <th>Harga</th>
+              <th>Tambah ke Keranjang</th>
+            </tr>
+          </thead>
+          <tbody>";
+  while($row = mysqli_fetch_assoc($result)) {
+    echo "<tr>
+            <td>".$row["nama_makanan"]."</td>
+            <td>".$row["detail_makanan"]."</td>
+            <td>".$row["harga"]."</td>
+            <td><button>Tambah</button></td>
+          </tr>";
+  }
+  echo "</tbody></table>";
+} else {
+  // Jika tidak ditemukan makanan yang sesuai, tampilkan pesan
+  echo "Makanan tidak ditemukan.";
+}
+
+mysqli_close($conn);
+?>
