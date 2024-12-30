@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.info {
+  margin-top: 20px;
+}
+
+.info p {
+  margin: 5px 0;
+}
+
+.info label {
+  font-weight: bold;
+}
+
+.items {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.total {
+  text-align: right;
+  font-weight: bold;
+}
+
+/* Style untuk label */
+label {
+  display: inline-block;
+  width: 120px;
+}
+
+/* Style untuk nilai */
+.value {
+  font-weight: bold;
+}
+
+/* Style untuk tanggal */
+.date {
+  font-style: italic;
+}
+
+/* Style untuk header tabel */
+th {
+  background-color: #f9f9f9;
+}
+
+/* Style untuk baris ganjil pada tabel */
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+/* Style untuk total */
+.total {
+  font-size: 18px;
+  margin-top: 30px;
+}

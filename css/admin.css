@@ -1,0 +1,206 @@
+
+    /* CSS styles for the table and other elements */
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #313742;
+    }
+
+    .navbar {
+      width: 100%;
+      background-color: #3b424f;
+      overflow: auto;
+    }
+
+    .navbar a {
+      float: left;
+      padding: 12px;
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+      border-radius: 4px;
+    }
+
+    .navbar a:hover {
+      background-color: #ffae58;
+    }
+
+    .active {
+      background-color:#ff7d3a;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background-color: #3b424f;
+      text-decoration-color: white;
+      font-family: arial;
+      color: #dbdbff;
+    }
+
+    th {
+      padding: 8px;
+      text-align: left;
+      background-color: #ff5700;
+      color: white;
+    }
+
+    td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid black;
+    }
+
+    .bold-text {
+      color: #cfcfcf;
+    }
+
+    tr:hover {
+      background-color: #170b2a;
+    }
+
+    h2 {
+      color: #333;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0.6% auto;
+      color: white;
+    }
+
+    /* Membuat teks menjadi responsif */
+    @media screen and (max-width: 20%) {
+      h2 {
+        margin: 20px auto;
+        font-size: 24px;
+      }
+    }
+
+    /* CSS untuk membuat tombol login floating di pojok kanan atas */
+    .login-button {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: #0087bd;
+      color: white;
+      padding: 7px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .login-button:hover {
+      background-color: #6f00ff;
+      text-decoration: none;
+    }
+  @keyframes glowing-text {
+  0% {
+    text-shadow: -1px 0px 10px #00FF00;
+  }
+  50% {
+    text-shadow: -1px 0px 30px #00FF00;
+  }
+  100% {
+    text-shadow: -1px 0px 10px #00FF00;
+  }
+}
+
+h2.title-underline {
+  color: white;
+  animation: glowing-text 1s linear infinite;
+}
+
+    
+  /* CSS untuk popup tambah menu */
+.modal {
+  display: none; /* Defaultnya sembunyikan */
+  position: fixed; /* Tetap berada di tempat saat di-scroll */
+  z-index: 1; /* Menempatkan popup di atas konten lain */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Tambahkan scroll jika konten melebihi viewport */
+  background-color: rgba(0, 0, 0, 0.4); /* Warna latar belakang semi-transparan */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* Posisikan popup di tengah */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Sesuaikan ukuran popup di sini */
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Styling untuk input field pada form */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Styling untuk tombol Tambah Menu dan Edit Menu */
+.tambah-button,
+.edit-button {
+  background-color: green;
+  color: white;
+  padding: 7px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.tambah-button:hover,
+.edit-button:hover {
+  background-color: #6f00ff;
+}
+
+.delete-button {
+  background-color: #ff0000;
+  color: white;
+  padding: 7px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.delete-button:hover {
+  background-color: #ff4c4c;
+}
+

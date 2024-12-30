@@ -1,0 +1,97 @@
+  body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #313742;
+    }
+
+    .navbar {
+      width: 100%;
+      background-color: #3b424f;
+      overflow: auto;
+    }
+
+    .navbar a {
+      float: left;
+      padding: 12px;
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+      border-radius: 4px;
+    }
+
+    .navbar a:hover {
+      background-color: #ffae58;
+    }
+
+    .active {
+      background-color:#ff7d3a;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background-color: #3b424f;
+      text-decoration-color: white;
+      font-family: arial;
+      color: #dbdbff;
+    }
+
+    th {
+      padding: 8px;
+      text-align: left;
+      background-color: #ff5700;
+      color: white;
+    }
+
+    td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid black;
+    }
+
+    .bold-text {
+      color: #cfcfcf;
+    }
+
+    tr:hover {
+      background-color: #170b2a;
+    }
+
+    h2 {
+      color: #333;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0.6% auto;
+      color: white;
+    }
+
+    /* Membuat teks menjadi responsif */
+    @media screen and (max-width: 20%) {
+      h2 {
+        margin: 20px auto;
+        font-size: 24px;
+      }
+    }
+
+    /* CSS untuk membuat tombol login floating di pojok kanan atas */
+    .login-button {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: #0087bd;
+      color: white;
+      padding: 7px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .login-button:hover {
+      background-color: #6f00ff;
+      text-decoration: none;
+    }
+   /* CSS styles for the table and other elements */
+    .title-underline {
+      border-bottom: 2px solid orange;
+      display: inline-block;
+      padding-bottom: 5px;
+    }

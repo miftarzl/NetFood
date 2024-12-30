@@ -1,0 +1,791 @@
+html {
+    font-family: sans-serif;
+    font-size: 16px;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: Montserrat,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji';
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(0,0,0,.84);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -moz-font-feature-settings: liga on;
+}
+
+img.lazy {
+    opacity: 0;
+    position: right;
+}
+
+img.lazy:hover {
+    animation: shake 0.8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+img:not(.initial) {
+    transition: opacity 1s;
+}
+
+img.error,img.initial,img.loaded {
+    opacity: 1;
+}
+
+img:not([src]) {
+    visibility: hidden;
+}
+
+p {
+    color: #6d727d;
+}
+
+.btn {
+    font-size: .875rem;
+    font-weight: 700;
+    color: white;
+    background-color: #f15b2a;
+    text-decoration: none;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: #f15b2a;
+}
+
+.top-nav {
+    position: fixed;
+    z-index: 700;
+    top: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    box-shadow: rgba(0,0,0,.1) 0 0 10px 0;
+}
+
+.top-nav .col {
+    height: 50px;
+}
+
+.lang {
+    margin: 0;
+    padding: 0 10px;
+    border: 1px solid rgba(0,0,0,.3);
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: 1rem;
+    margin-left: auto;
+    height: 20px;
+    display: inline-block;
+}
+
+.lang select {
+    border: none;
+    margin: 0;
+    padding: 0;
+    height: 39px;
+    color: #6d727d;
+}
+
+.col-shop .grid-center {
+    align-items: center;
+}
+
+.hero {
+    position: relative;
+    height: 400px;
+    margin-top: 60px;
+    padding: 5px 0 29px;
+    color: #fff;
+    background-color: rgb(237 88 36);
+}
+
+.hero .container {
+    position: relative;
+    z-index: 0;
+    background-color: #292929;
+}
+
+.hero p {
+    font-weight: 500;
+    color: #fff;
+    text-align: left;
+}
+
+.hero-banner {
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: contain;
+    background-color: #292929;
+}
+
+.hero a {
+    color: white;
+}
+
+.vid {
+    padding: 60px 0;
+}
+
+h1,h2,h3,h4 {
+    font-size: 2rem;
+    line-height: 1.3;
+    color: #3e4148;
+}
+
+h1 {
+    color: #fff;
+    animation: berjalan 2s;
+}
+
+@keyframes berjalan {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+h2 {
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+a h2 {
+    text-decoration: none;
+}
+
+.shop-and-download .shop-now {
+    font-size: .875rem;
+    width: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    text-align: center;
+    background-color: #8cc540;
+}
+
+.shop-and-download img {
+    width: 100%;
+}
+
+.shop-and-download .grid {
+    margin-top: 10px;
+}
+
+.grid a {
+    color: #bbbbbb;
+}
+
+.how-to-shop {
+    padding: 60px 0 30px;
+    text-align: center;
+}
+
+.pic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 148px;
+    text-align: center;
+}
+
+.pic img {
+    margin: 0 auto;
+}
+
+.how-to-shop .grid-center,.why .grid-center {
+    margin-top: 40px;
+}
+
+.why h2 {
+    color: #bbbbbb;
+}
+
+.why h4 {
+    color: #bbbbbb;
+}
+
+.why p {
+    color: #808080;
+}
+
+.how-to-shop .grid-center .col p,.why .grid-center .col p {
+    font-size: 1.125rem;
+    position: relative;
+    margin-top: 60px;
+    padding: 0 15px;
+}
+
+.how-to-shop .grid-center .col {
+    position: relative;
+}
+
+.how-to-shop .grid-center .col p:before {
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 32px;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    width: 32px;
+    height: 32px;
+    margin-left: -16px;
+    content: '1';
+    text-align: center;
+    color: #fff;
+    border-radius: 50%;
+    background-color: #8cc540;
+}
+
+.how-to-shop .grid-center .col:after {
+    position: absolute;
+    top: 173px;
+    left: 195px;
+    width: 120px;
+    content: '';
+    border-bottom: 2px dashed #f5f5f5;
+}
+
+.how-to-shop .grid-center .col:last-child:after {
+    display: none;
+}
+
+.how-to-shop .grid-center .col:nth-child(2) p:before {
+    content: '2';
+}
+
+.how-to-shop .grid-center .col:nth-child(3) p:before {
+    content: '3';
+}
+
+.how-to-shop .grid-center .col:nth-child(4) p:before {
+    content: '4';
+}
+
+.how-to-shop .grid-center .col:nth-child(5) p:before {
+    content: '5';
+}
+
+.why {
+    padding: 60px 0 30px;
+    text-align: center;
+    background-color: #f5f5f7;
+}
+
+.why .grid-center .col h4 {
+    margin-bottom: 10px;
+}
+
+.why .grid-center .col p {
+    font-size: 1rem;
+    margin-top: 0;
+}
+
+.l-section .col {
+    overflow: hidden;
+    height: 400px;
+}
+
+.l-section .col-middle h2 {
+    margin-bottom: 0;
+}
+
+.l-section img {
+    height: 100%;
+}
+
+.l-section .col-middle h2,.l-section .col-middle p {
+    max-width: 600px;
+    margin-left: 100px;
+}
+
+.l-section .col-4 {
+    flex-basis: 600px;
+    max-width: 600px;
+}
+
+.l-section .col-middle {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: none;
+}
+
+.driver {
+    background-color: #f5f5f7;
+}
+
+.driver .col-middle {
+    align-items: flex-end;
+    order: -1;
+}
+
+.driver .col-middle h2 a {
+    margin-right: 50%;
+    margin-left: 50%;
+    color: #ff2828;
+    text-decoration: none;
+}
+
+.driver .col-middle p {
+    margin-right: 100px;
+    margin-left: 0;
+    color: #969696;
+ /* hitam */;
+}
+
+.driver .col {
+    text-align: right;
+}
+
+.download a {
+    color: white;
+}
+
+.download .app-store {
+    display: inline-block;
+    width: 130px;
+    margin-right: 8px;
+}
+
+.countries h4 {
+    color: #bbbbbb;
+}
+
+.countries {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #f5f5f7;
+}
+
+.countries h2 {
+    color: #bbbbbb;
+}
+
+.countries p {
+    font-size: 1.125rem;
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.countries img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.l-section .col-middle p,h4 {
+    font-size: 1.125rem;
+}
+
+.countries .grid-middle .col,.shop-and-download {
+    margin-top: 30px;
+}
+
+.how-to-shop .grid-center .col,.why .grid-center .col {
+    margin-bottom: 30px;
+}
+
+.partners {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.partners h2 {
+    color: #bbbbbb;
+}
+
+.partners p {
+    font-size: 1.125rem;
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.partners-logo {
+    margin-top: 40px;
+    border-radius: 3px;
+}
+
+.partners-logo .cnt {
+    display: inline-block;
+    font-weight: 500;
+    color: #6d727d;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+
+.partners-logo .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90px;
+    border-radius: 3px;
+}
+
+.partners-logo .grid-center {
+    margin-bottom: 30px;
+    border-radius: 3px;
+}
+
+.partners-logo .logo img {
+    width: 80%;
+    -webkit-transform: scale(.8);
+    -moz-transform: scale(.8);
+    -ms-transform: scale(.8);
+    -o-transform: scale(.8);
+    transform: scale(.8);
+    border-radius: 6px;
+}
+
+.partners .btn.shop {
+    width: 380px;
+    margin-top: 40px;
+}
+
+.faq {
+    padding: 60px 0;
+    text-align: center;
+    color: #bbbbbb;
+}
+
+.faq p {
+    font-size: 1.125rem;
+}
+
+.faq h2 {
+    color: #bbbbbb;
+}
+
+.faq .read-faq {
+    width: 380px;
+    margin-top: 40px;
+}
+
+.faq .read-faq {
+    color: #f15b2a;
+    border: 1px solid #ced1d9;
+    background: 0 0;
+}
+
+footer {
+    padding-top: 40px;
+    border-top: 1px solid #ced1d9;
+}
+
+footer .download {
+    margin-left: auto;
+}
+
+footer .download h4 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #f15b2a;
+}
+
+footer .download p {
+    font-size: .875rem;
+    margin: 10px 0 0;
+}
+
+footer .download p:nth-child(3) {
+    margin-top: 30px;
+}
+
+footer .copy {
+    font-size: .75rem;
+    padding: 10px;
+    text-align: center;
+}
+
+footer .copy p {
+    color: #fff;
+}
+
+footer .content li,footer .content ul {
+    font-size: .875rem;
+    line-height: 2;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer .content ul {
+    margin-bottom: 20px;
+}
+
+footer .content a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #333;
+}
+
+footer .content a:hover {
+    text-decoration: underline;
+}
+
+footer .content ul li:first-child {
+    font-size: .6875rem;
+    text-transform: uppercase;
+    color: #9da3b4;
+}
+
+footer .content ul li strong {
+    font-weight: 400;
+}
+
+footer .content .social li:not(:first-child) {
+    display: inline-block;
+    margin: 8px 5px 0 0;
+}
+
+footer .download.m {
+    display: none;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+@media (max-width:500px) {
+    html {
+        font-size: 13px;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+        color: #bbbbbb;
+    }
+
+    .top-nav .brand img {
+        width: 110px;
+        height: auto;
+        aspect-ratio: 200/41;
+    }
+
+    .top-nav .shop-now {
+        font-size: 1rem;
+        width: 60px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        height: 20px;
+        margin-left: 10px;
+    }
+
+    .lang,.lang select {
+        height: 31px;
+    }
+
+    .hero {
+        height: auto;
+        color: #6d727d;
+    }
+
+    .hero p {
+        color: #6d727d;
+    }
+
+    .hero-banner {
+        right: -200px;
+        display: none;
+        width: auto;
+        height: 100%;
+    }
+
+    .how-to-shop .grid-center .col:after {
+        top: inherit;
+        bottom: -35px;
+        left: 50%;
+        width: 2px;
+        height: 30px;
+        margin-left: -1px;
+        border-bottom: 0;
+        border-left: 2px dashed #f5f5f5;
+    }
+
+    .how-to-shop .grid-center .col p {
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+
+    .why .grid-center .col p {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    footer .content {
+        background-size: 100%;
+    }
+
+    footer .download.des {
+        display: none;
+    }
+
+    footer .download.m {
+        display: initial;
+    }
+
+    .partners-logo .logo {
+        flex-basis: 33.3333%;
+        width: 33.3333%;
+        max-width: 33.3333%;
+        height: 60px;
+    }
+
+    footer .content .col-3 {
+        flex-basis: 50%;
+        width: 50%;
+        max-width: 50%;
+        height: 60px;
+    }
+
+    footer .content .col-3 {
+        height: initial;
+    }
+
+    footer .content .grid {
+        justify-content: center;
+    }
+
+    .how-to-shop .container,.why .container {
+        overflow: hidden;
+        margin: 0;
+    }
+
+    .faq .read-faq,.partners .btn.shop {
+        font-size: 1rem;
+        width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .countries,.faq,.hero,.how-to-shop,.partners,.why {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .l-section .col-middle {
+        align-items: center;
+        padding: 40px 0!important;
+        text-align: center;
+    }
+
+    .l-section .col {
+        height: initial;
+    }
+
+    .l-section .col-middle h2,.l-section .col-middle p {
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 10px;
+        margin-left: 0;
+        padding-right: 30px;
+        padding-left: 30px;
+        text-align: center;
+    }
+
+    .countries img,.l-section img {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .hero .hero-content {
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #fff;
+    }
+
+    .hero .hero-content h1,.hero .hero-content p {
+        text-align: center;
+        color: #333;
+    }
+
+    .hero .hero-content h1 {
+        margin-top: 0;
+    }
+
+    .shop-and-download .shop-now {
+        font-size: 1.125rem!important;
+        background-color: #f15b2a;
+    }
+
+    .how-to-shop img,.why img {
+        -webkit-transform: scale(.8);
+        -moz-transform: scale(.8);
+        -ms-transform: scale(.8);
+        -o-transform: scale(.8);
+        transform: scale(.8);
+    }
+
+    .driver .col-middle {
+        order: 0;
+    }
+
+
+.shopper h2 a {
+    text-decoration: none;
+    color: orangered;
+}
+
+.shopper p {
+    color: #808080;
+}
+
+.bottom-content p {
+    color: #bbbbbb;
+}}
